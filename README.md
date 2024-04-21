@@ -7,7 +7,7 @@
 - диск;
 - сеть.
 
-Настроить zabbix (использовать screen (комплексный экран).
+Настроить zabbix (использовать screen (комплексный экран)).
 
 Устанавливаем репозиторий Zabbix\
 [root@otus-task14 ~]# rpm -Uvh https://repo.zabbix.com/zabbix/6.5/rhel/7/x86_64/zabbix-release-6.5-1.el7.noarch.rpm \
