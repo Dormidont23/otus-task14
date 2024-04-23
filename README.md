@@ -31,3 +31,8 @@ MariaDB [(none)]> create user zabbix@localhost identified by 'zabbix_passwd';\
 MariaDB [(none)]> grant all privileges on zabbix.* to zabbix@localhost;\
 MariaDB [(none)]> set global log_bin_trust_function_creators = 1;\
 MariaDB [(none)]> quit;
+### Импорт схемы данных Zabbix и отключение log_bin_trust_function_creators
+[root@otus-task14 ~]# zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -p zabbix\
+[root@otus-task14 ~]# mysql -uroot\
+mysql> set global log_bin_trust_function_creators = 0;\
+mysql> quit;
