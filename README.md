@@ -30,9 +30,12 @@ MariaDB [(none)]> create database zabbix character set utf8 collate utf8_bin;\
 MariaDB [(none)]> create user zabbix@localhost identified by 'zabbix_passwd';\
 MariaDB [(none)]> grant all privileges on zabbix.* to zabbix@localhost;\
 MariaDB [(none)]> set global log_bin_trust_function_creators = 1;\
-MariaDB [(none)]> quit;
+MariaDB [(none)]> quit
 ### Импорт схемы данных Zabbix и отключение log_bin_trust_function_creators
 [root@otus-task14 ~]# zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -p zabbix\
 [root@otus-task14 ~]# mysql -uroot\
 MariaDB [(none)]> set global log_bin_trust_function_creators = 0;\
-MariaDB [(none)]> quit;
+MariaDB [(none)]> quit
+### Пароль для базы данных сервера Zabbix
+[root@otus-task14 ~]# nano /etc/zabbix/zabbix_server.conf
+DBPassword=zabbix_passwd
