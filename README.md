@@ -46,5 +46,5 @@ php_value[date.timezone] = Asia/Barnaul
 [root@otus-task14 ~]# systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm\
 [root@otus-task14 ~]# systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
 ### Устанавливаем репозиторий Zabbix и ставим zabbix-agent
-[root@otus-task14 ~]# rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm\
+[root@otus-task14 ~]# rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm \
 [root@otus-task14 ~]# yum install zabbix-agent
