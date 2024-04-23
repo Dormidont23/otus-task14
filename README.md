@@ -26,8 +26,8 @@ enabled=1\
 [root@otus-task14 ~]# systemctl start mariadb.service
 ### Инициализация базы данных
 [root@otus-task14 ~]# mysql -uroot\
-mysql> create database zabbix character set utf8 collate utf8_bin;\
-mysql> create user zabbix@localhost identified by 'password';\
-mysql> grant all privileges on zabbix.* to zabbix@localhost;\
-mysql> set global log_bin_trust_function_creators = 1;\
-mysql> quit;
+MariaDB [(none)]> create database zabbix character set utf8 collate utf8_bin;\
+MariaDB [(none)]> create user zabbix@localhost identified by 'password';\
+MariaDB [(none)]> grant all privileges on zabbix.* to zabbix@localhost;\
+MariaDB [(none)]> set global log_bin_trust_function_creators = 1;\
+MariaDB [(none)]> quit;
