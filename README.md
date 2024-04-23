@@ -39,3 +39,6 @@ MariaDB [(none)]> quit
 ### Пароль для базы данных сервера Zabbix
 [root@otus-task14 ~]# nano /etc/zabbix/zabbix_server.conf\
 DBPassword=zabbix_passwd
+# Нужно раскомментировать временную зону
+[root@otus-task14 ~]# nano /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf\
+php_value[date.timezone] = Europe/Moscow
