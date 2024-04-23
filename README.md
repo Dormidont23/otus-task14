@@ -37,5 +37,5 @@ MariaDB [(none)]> quit
 MariaDB [(none)]> set global log_bin_trust_function_creators = 0;\
 MariaDB [(none)]> quit
 ### Пароль для базы данных сервера Zabbix
-[root@otus-task14 ~]# nano /etc/zabbix/zabbix_server.conf
+[root@otus-task14 ~]# nano /etc/zabbix/zabbix_server.conf\
 DBPassword=zabbix_passwd
